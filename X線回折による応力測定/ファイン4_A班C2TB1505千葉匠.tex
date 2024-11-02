@@ -1,0 +1,51 @@
+\documentclass[autodetect-engine, dvipdfmx-if-dvi, ja=standard, a4paper,12pt]{bxjsarticle}
+
+\usepackage[dvipdfmx]{graphicx}
+
+\usepackage{amsmath}
+\usepackage{amssymb,latexsym,mathtools}
+\usepackage{tabularx}
+\usepackage{bm}
+\usepackage{url}
+
+%サブキャプションを使うとき
+\usepackage[hang,small,bf]{caption}
+\usepackage[subrefformat=parens]{subcaption}
+
+
+\usepackage[version=4]{mhchem} %千葉匠追加
+\usepackage{multirow}
+\usepackage{bm}
+\usepackage{physics}
+
+% 表の番号のフォーマットを "Table 1" という形式にする
+\renewcommand{\tablename}{Table}
+
+
+% 図の番号のフォーマットを"Fig.1"という形式にする
+\renewcommand{\figurename}{Fig.}
+
+% タイトルの読み込み
+\input{レポート題目}
+
+
+\begin{document}
+
+% タイトル生成
+\input{表紙.tex}
+
+
+% 目次生成
+\tableofcontents 
+\clearpage
+% 章ごとに別ファイルにして，下さい．
+% 各章のファイルは，\input{ファイル名} で読み込んで下さい
+%\input{章別サンプル}
+\input{目的}
+\input{実験装置}
+\input{実験方法}
+\input{実験結果}
+\input{考察}
+\input{参考文献}
+
+\end{document}
