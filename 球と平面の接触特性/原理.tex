@@ -61,3 +61,27 @@
     \caption{Classification of contact morphology in static contact．}
     \label{fig:接触形態}
 \end{figure}
+
+\subsection{すべり摩擦の機構}
+
+\subsubsection{凝着項}
+摩擦面同士が相対すべり運動するためには，真実接触部での凝着部分をせん断することが必要であり，このせん断力$F_a$が摩擦力となる．ここで凝着とは，二つの固体表面が第三の物質を介して，互いに接合する現象のことであり，その結合形態は，共有·金属·イオン結合からなる一次結合と，分子間力を主体とした二次結合に分類される．
+\begin{equation}
+    \label{eq:せん断力}
+    F_A = A_\tau \tau
+\end{equation}
+ここで$A_\tau$は真実接触面積，$\tau$は凝着部をせん断するために必要な界面のせん断応力[Pa]である．
+
+\subsubsection{掘り起こし項}
+硬い金属の突起が軟らかい金属の中に押し込まれた状態で互いにすべるためには，前面にある部分を排除，すなわちすき起こさなければならない.これに必要な力 $F_p$が摩擦力となり,次のように表すことができる.
+\begin{equation}
+    \label{eq:掘り起こし}
+    F_p = A_h p_0
+\end{equation}
+ここで，$A_h$は進行方向前面の投影面積[$\mathrm{m^2}$]，$p_0$は塑性流動圧力[Pa]である．
+
+摩擦力は$F = F_a + F_h$と表されるが，一般に機械要素として表される摩擦面の表面粗さは小さいため，掘り起こし項は凝着項に比較して小さく無視できる．したがって，摩擦係数$\mu$は次のように表される．
+\begin{equation}
+    \label{eq:摩擦係数}
+    \mu = \frac{F}{W} \approx \frac{F_a}{W} = \frac{A_\tau \tau}{W}
+\end{equation}
