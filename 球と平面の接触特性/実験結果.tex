@@ -35,7 +35,9 @@
 
 \subsection{摩擦試験}
 
-摩擦係数の測定結果をボール試験片の曲率半径ごとに表から表にかけて示す．
+摩擦係数の測定結果をボール試験片の曲率半径$R$ = 1mm，4mm，8mmのそれぞれについて表\ref{tbl:ボール半径1}から表\ref{tbl:ボール半径8}にかけて示す．また，横軸に摩擦係数の平均値$\mu$，縦軸に垂直荷重$W$として測定結果をプロットしたものを図\ref{fig:fig_1mm}から図\ref{fig:fig_8mm}にかけてそれぞれ示す．
+
+どの曲率半径においても，垂直荷重の増加による摩擦係数の変化はほとんど起こっていない．$R$ = 1mmと4mmを比較しても，摩擦係数の変化はほとんど見られない．$R$ = 8mmの場合は，垂直荷重が小さいため，相対的に外乱の影響が大きくなっており，標準偏差が大きくなっている．
 
 \begin{table}[htbp]
     \centering
@@ -91,3 +93,89 @@
     \end{tabular}
     }
 \end{table}
+
+\begin{figure}[htbp]
+    \centering %中央揃え
+    \includegraphics[width=100truemm,clip]{fig/fig_1mm.pdf}
+    \caption{Value of coefficient of friction for vertical load(R=1[mm])．}
+    \label{fig:fig_1mm}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering %中央揃え
+    \includegraphics[width=100truemm,clip]{fig/fig_4mm.pdf}
+    \caption{Value of coefficient of friction for vertical load(R=4[mm])．}
+    \label{fig:fig_4mm}
+\end{figure}
+\clearpage
+\begin{figure}[htbp]
+    \centering %中央揃え
+    \includegraphics[width=100truemm,clip]{fig/fig_8mm.pdf}
+    \caption{Value of coefficient of friction for vertical load(R=8[mm])．}
+    \label{fig:fig_8mm}
+\end{figure}
+
+\subsection{$\mathrm{P_m/H_v}$値および静的接触形態について}
+ヘルツの弾性接触理論を用いて,各摩擦条件における理論上の接触面積$A$,平均接
+触圧力$P_m$，$\mathrm{P_m/H_v}$値および静的接触形態を表\ref{tbl:平均圧力1mm}から表\ref{tbl:平均圧力8mm}にかけて示す．
+
+$\mathrm{P_m/H_v}$値を横軸，摩擦係数$\mu$を縦軸としてプロットしたものを図\ref{fig:fig_Pm}に示す．$\mathrm{P_m/H_v}$値の変化による摩擦係数の大きな変化は見られなかった．しかし，おおよその傾向として$\mathrm{P_m/H_v}$ = 0から0.5付近の範囲では値の増加に伴って摩擦係数がやや減少．$\mathrm{P_m/H_v}$ = 0.6から1.3付近の範囲ではは摩擦係数0.6まで増加してほぼ一定の値となり，$\mathrm{P_m/H_v}$ = 1.7で再び増加するグラフとなっている．
+
+\begin{table}[htbp]
+    \centering
+    \caption{Theoretical contact area, average contact pressure, $\mathrm{P_m/H_v}$ value and static contact morphology(R=1[mm]).}
+    \label{tbl:平均圧力1mm}
+    \scalebox{1.0}{
+    \begin{tabular}{cccc}
+    \hline
+    垂直荷重 {[}N{]}    & 0.98    & 4.9     & 9.8     \\ \hline
+    接触円半径{[}mm{]}   & 0.0234  & 0.0400  & 0.0504  \\ \hline
+    接触円面積{[}mm2{]}  & 0.00172 & 0.00503 & 0.00798 \\ \hline
+    平均接触圧力{[}GPa{]} & 0.570   & 0.975   & 1.23    \\ \hline
+    Pm/Hv           & 0.771   & 1.318   & 1.66    \\ \hline
+    静的接触形態          & 弾塑性接触   & 塑性接触    & 塑性接触    \\ \hline
+    \end{tabular}
+    }
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Theoretical contact area, average contact pressure, $\mathrm{P_m/H_v}$ value and static contact morphology(R=4[mm]).}
+    \label{tbl:平均圧力4mm}
+    \scalebox{1.0}{
+    \begin{tabular}{cccc}
+    \hline
+    垂直荷重 {[}N{]}    & 0.98    & 4.9    & 9.8    \\ \hline
+    接触円半径{[}mm{]}   & 0.0371  & 0.0635 & 0.0800 \\ \hline
+    接触円面積{[}mm2{]}  & 0.00433 & 0.0127 & 0.0201 \\ \hline
+    平均接触圧力{[}GPa{]} & 0.226   & 0.387  & 0.488  \\ \hline
+    Pm/Hv           & 0.306   & 0.523  & 0.659  \\ \hline
+    静的接触形態          & 弾性接触    & 弾塑性接触  & 弾塑性接触  \\ \hline
+    \end{tabular}
+    }
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Theoretical contact area, average contact pressure, $\mathrm{P_m/H_v}$ value and static contact morphology(R=8[mm]).}
+    \label{tbl:平均圧力8mm}
+    \scalebox{1.0}{
+    \begin{tabular}{cccc}
+    \hline
+    垂直荷重 {[}N{]}    & 0.098   & 0.196   & 0.49    \\ \hline
+    接触円半径{[}mm{]}   & 0.0217  & 0.0274  & 0.0371  \\ \hline
+    接触円面積{[}mm2{]}  & 0.00148 & 0.00235 & 0.00433 \\ \hline
+    平均接触圧力{[}GPa{]} & 0.0662  & 0.0834  & 0.1132  \\ \hline
+    Pm/Hv           & 0.0894  & 0.113   & 0.153   \\ \hline
+    静的接触形態          & 弾性接触    & 弾性接触    & 弾性接触    \\ \hline
+    \end{tabular}
+    }
+\end{table}
+
+\begin{figure}[htbp]
+    \centering %中央揃え
+    \includegraphics[width=100truemm,clip]{fig/fig_PmHv.pdf}
+    \caption{Relationship between coefficient of friction and $\mathrm{P_m/H_v}$ value．}
+    \label{fig:fig_Pm}
+\end{figure}
+
