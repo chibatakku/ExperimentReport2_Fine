@@ -1,0 +1,62 @@
+\section{課題}
+
+対称性から $0 \leq x \leq l_0 + \frac{1}{2}l_1$ の範囲で考えればよい。
+
+$0 \leq x \leq l_0$ でたわみ曲線の微分方程式は
+
+\begin{equation}
+    \frac{d^2y}{dx^2} = -\frac{W}{EI}x
+    \label{eq:たわみ式1}
+\end{equation}
+
+\(x\) について積分すると
+\begin{equation}
+    \frac{dy}{dx} = -\frac{W}{2EI}x^2 + C_1
+    \label{eq:傾き1}
+\end{equation}
+\begin{equation}
+    y = -\frac{W}{6EI}x^3 + C_1x + C_2
+    \label{eq:変位1}
+\end{equation}
+$x = 0$ で $y = 0$ より $C_2 = 0$ である。
+
+$l_0 \leq x \leq l_0 + \frac{1}{2}l_1$ でたわみ曲線の微分方程式は
+\begin{equation}
+    \frac{d^2y}{dx^2} = -\frac{W}{EI}l_0
+    \label{eq:たわみ式2}
+\end{equation}
+
+\(x\) ついて積分すると
+\begin{equation}
+    \frac{dy}{dx} = -\frac{Wl_0}{EI}x + C_3
+    \label{eq:傾き2}
+\end{equation}
+\begin{equation}
+    y = -\frac{Wl_0}{2EI}x^2 + C_3x + C_4
+    \label{eq:変位2}
+\end{equation}
+
+$x = l_0 + \frac{1}{2}l_1$ で $\frac{dy}{dx} = 0$ より
+\begin{equation}
+    C_3 = \frac{Wl_0}{EI}(l_0 + \frac{1}{2}l_1)
+    \label{eq:C3}
+\end{equation}
+
+$x = l_0$ で，式 (\ref{eq:傾き1}) と式 (\ref{eq:傾き2}) が連続であるから
+
+\begin{align}
+    -\frac{W}{2EI}l_0^2 + C_1 &= -\frac{Wl_0}{EI}l_0 + \frac{Wl_0}{EI}(l_0 + \frac{1}{2}l_1)\\
+    C_1 &= \frac{Wl_0}{2EI}(l_0 + l_1)
+    \label{eq:連続条件1}
+\end{align}
+
+以上から得られた$C_1$と$C_2$を式(\ref{eq:変位1})に代入すると
+\begin{equation}
+    y = -\frac{W}{6EI}x^3 + \frac{Wl_0}{2EI}(l_0 + l_1)x
+    \label{eq:変位1_2}
+\end{equation}
+$x = l_0$のとき
+\begin{equation}
+    y = \frac{W}{6EI}(2l_0^3 + 3l_1l_0^2)
+    \label{eq:変位1_3}
+\end{equation}
