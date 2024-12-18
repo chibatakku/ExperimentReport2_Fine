@@ -1,1 +1,37 @@
 \section{課題}
+
+\subsection{(1)異なるセンサによる自律校正}
+測定範囲が異なるセンサを用いて今回の自律校正原理を用いる場合を考える．この場合でも，レバーの角度変化を調整することでそれぞれの測定範囲を補うことができ，校正原理を適用することできる．
+測定精度が異なるセンサを用いる場合を考えると，式(\ref{eq:誤差Ak-1})，式(\ref{eq:誤差Bk})が同様に成り立つことから，校正原理を適用することができる．
+
+\subsection{(2)レバー倍率の誤差による影響}
+レバー系の倍率nに誤差$\Delta$nがあった場合の影響を考察する．式(\ref{eq:誤差Ak-1})，式(\ref{eq:誤差Bk})に$\Delta$n考慮すると，それぞれの誤差は以下のようになる．
+式(\ref{eq:倍率誤差Ak-1})，式(\ref{eq:倍率誤差Bk})から，レバー倍率の誤差は，校正曲線の誤差の収束速度に影響を与えることが分かる．レバー倍率の誤差の影響を抑えるためには，nを大きくすることで，$\Delta$nの影響を相対的に小さくすることが有効であると考えられる．
+
+\begin{equation}
+    e_{Ak-1} = \frac{e_{A0}}{(n + \Delta n)^{k-1}}
+    \label{eq:倍率誤差Ak-1}
+\end{equation}
+\begin{equation}
+    e_{Bk} = \frac{e_{A0}}{(n + \Delta n)^{k}}
+    \label{eq:倍率誤差Bk}
+\end{equation}
+
+\subsection{(3)センサの平均感度に誤差があった場合の影響}
+まずstep1における電圧誤差$E_{A0}$は次式で求められる．
+\begin{equation}
+    E_{A0} = V_{TrueA} - V_{A0} = V_{TrueA} - S_Ax_{Mea}
+    \label{eq:電圧誤差A0}
+\end{equation}
+次にstep2における電圧誤差$E_{B0}$は次式で求められる．
+\begin{equation}
+    E_{B0} = T_{TrueB}(\frac{x_{Mea}}{n}) - S_A\frac{x_{Mea}}{n} = E_{A0}
+    \label{eq:電圧誤差B0}
+\end{equation}
+stepkにおける電圧誤差$E_{Bk}$は次式で求められる．
+\begin{equation}
+    E_{Bk} = T_{TrueB}(\frac{x_{Mea}}{n}) - V_{Bk} = \frac{E_{A0}}{n^k}
+    \label{eq:電圧誤差Bk}
+\end{equation}
+
+以上から平均感度の誤差は
